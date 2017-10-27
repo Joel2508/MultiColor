@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MultiColor.View.SliderColorView"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding SliderColor}">
+            <BoxView 
+                HorizontalOptions="FillAndExpand"                     
+                HeightRequest="100"                    
+                Color="Blue"/>
+            <Label
+                Text="Red:">
+            </Label>
+            <Slider
+                Minimum="0"
+                Maximum="1"                
+                x:Name="sliderRed">
+            </Slider>
+            <Label
+                Text="Green:">
+            </Label>
+            <Slider                
+                Minimum="0"
+                Maximum="1"                         
+                x:Name="sliderGreen">
+            </Slider>
+            <Label
+                Text="Blue:">
+            </Label>
+            <Slider
+                Minimum="0"
+                Maximum="1"                                    
+                x:Name="sliderBlue">
+            </Slider>
+            <Button 
+                Text="Ir"
+                Command="{Binding IrCommand}"
+                TextColor="Blue"                
+                BorderRadius="23"
+                BorderColor="Black"
+                BackgroundColor="White">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
